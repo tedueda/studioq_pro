@@ -384,6 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
         video.preload = 'metadata'; // メタデータのみプリロード（帯域節約）
         video.muted = true; // プリロード時はミュート
         video.style.display = 'none'; // 非表示
+        video.setAttribute('playsinline', 'true');
+        video.setAttribute('webkit-playsinline', 'true');
         
         // 日本語ファイル名の処理
         let processedUrl = videoUrl;
